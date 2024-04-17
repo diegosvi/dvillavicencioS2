@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dvillavicencioS2.Vistas.vRegistro"
+             >
+    <VerticalStackLayout>
+        <Label 
+            Text="VENTANA DE REGISTRO"
+            FontSize="24"
+            HorizontalOptions="Center" />
+ 
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+       
+
+        <Entry x:Name="txtUsuario" 
+           Placeholder="Ingrese su usuario"
+           Grid.Row="0"
+           Grid.Column="1"/>
+
+       
+        <Entry x:Name="txtContraseña" 
+           Placeholder="Ingrese su contraseña"
+           IsPassword="True"
+           Grid.Row="1"
+           Grid.Column="1"/>
+
+        <Button x:Name="btnGuardar"
+            Text="Guardar"
+            Clicked="btnGuardar_Clicked"
+            Grid.Row="2"
+            Grid.Column="1"/>
+</Grid>
+    </VerticalStackLayout>
+</ContentPage>

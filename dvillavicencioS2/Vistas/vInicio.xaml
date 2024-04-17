@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dvillavicencioS2.Vistas.vInicio">
+    <ScrollView> 
+    <VerticalStackLayout
+        Spacing="15"
+        Padding="20,20,20,20">
+
+            <Label x:Name="lblUsuario"
+               HorizontalTextAlignment="End"
+               FontSize="14"/>
+
+            <Label 
+            Text="Elementos Visuales"
+            TextColor="Blue"
+            FontSize="24"
+            HorizontalTextAlignment="Center"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Entry x:Name="txtDato" 
+               Placeholder= "Ingrese su dirección"
+                MaxLength="10"/>
+
+                <Image x:Name="img2"
+               Source="uisrael.png"
+               HeightRequest="100"/>
+
+                <Picker x:Name="pkCiudades" Title="Ciudades" >
+                    <Picker.Items>
+                        <x:String>QUITO</x:String>
+                        <x:String>GUAYAQUIL</x:String>
+                        <x:String>CUENCA</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Button x:Name="btnPicker"
+                Text="Ver elemento seleccionado"
+                Clicked="btnPicker_Clicked"/>
+
+                <DatePicker x:Name="dpFecha" 
+                    Format="mm/dd/yyyy"/>
+
+                <Label x:Name="lblFecha"
+               FontSize="20"
+               TextColor="Red"/>
+
+                <Button x:Name="btnFecha"
+                Text="VER FECHA"
+                Clicked="btnFecha_Clicked"/>
+
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
